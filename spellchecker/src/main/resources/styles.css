@@ -1,0 +1,180 @@
+/* Common styles for both modes */
+.root {
+    -fx-font-size: 14;
+}
+
+.button {
+    -fx-background-color: #1E90FF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-min-width: 100px;
+    -fx-effect: dropshadow(three-pass-box, #00000075, 1, 0, 3, 3);
+}
+
+.button:hover {
+    -fx-background-color: #1873CD;
+    -fx-effect: dropshadow(three-pass-box, #00000075, 5, 0.5, 3, 3);
+    -fx-scale-x: 1.05; 
+    -fx-scale-y: 1.05;
+}
+
+.button:disabled {
+    -fx-background-color: #797979;
+}
+
+/* Input container */
+.input-container {
+    -fx-min-width: 100%;
+    -fx-spacing: 10px;
+}
+
+.input-container > * {
+    -fx-spacing: 10px;
+}
+
+
+/* Suggestions box and correction options (replace, etc. buttons) */
+.spellchecker-container {
+    
+}
+
+#suggested-word-list {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 150px;
+}
+
+#label-suggested-words {
+    -fx-padding: 0 0 10 0;
+}
+
+.correction-container {
+    
+}
+
+#label-spelling-error {
+    -fx-padding: 0 0 10 0;
+}
+
+.spelling-error-field {
+    -fx-text-fill: red; 
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+}
+
+#label-correction-options {
+    -fx-padding: 15 0 5 0;
+}
+
+.correction-button-group {
+    -fx-spacing: 15px
+}
+
+.replace-button-group, .ignore-button-group, .add-delete-button-group{
+    -fx-spacing: 10px;
+}
+
+
+/* File contents and manual correction buttons (edit, save, undo) */
+#label-file-contents {
+    -fx-padding: 0 0 10 0;
+}
+
+.file-contents-container {
+    -fx-padding: 20 0 0 0;
+}
+
+.file-contents-container > * {
+}
+
+.file-text-field { 
+}
+
+.manual-correction-group {
+    -fx-padding: 10 0 10 0; /* top, right, bottom, left */
+    -fx-spacing: 15px;
+}
+
+#label-manual-correction-group {
+    -fx-padding: 2.5 0 0 0;
+}
+.manual-edit-field{
+    -fx-pref-width: 300px;
+    -fx-pref-height: 30px;
+    -fx-min-height: 30px;
+}
+
+
+/* Footer container and items */
+.footer-container {
+    -fx-padding: 5 5 7.5 5; /* top, right, bottom, left */
+}
+
+.toggle-lighting-box {
+    -fx-spacing: 10px
+}
+
+.footer-container Label, .footer-container RadioButton {
+    -fx-font-size: 12px;
+}
+
+
+/* Styles specific to light mode */
+.light-mode {
+    -fx-background-color: #cecece; /* Light gray background */
+    -fx-control-inner-background: #F5F5F5; /* Text area inner colour; colour of text is automatically managed*/
+}
+
+.light-mode Label, .light-mode RadioButton {
+    -fx-text-fill: #b85900;
+    -fx-font-weight: bold;
+    
+}
+
+.light-mode .footer-container {
+    -fx-background-color: #a8a8a870; /* Set your desired color for dark mode */
+}
+
+.light-mode .file-text-field .scroll-bar:vertical,
+.light-mode #suggested-word-list .scroll-bar:vertical {
+    -fx-pref-width: 15px;
+    -fx-background-color: #F5F5F5;
+}
+
+
+/* Styles specific to dark mode */
+.dark-mode {
+    -fx-background-color: #2e2e2e;
+    -fx-control-inner-background: #1E1E1E;   
+}
+
+.dark-mode Label, .dark-mode RadioButton {
+    -fx-text-fill: #FFFF99;
+    -fx-font-weight: bold;
+}
+.dark-mode .menu-bar .menu .label {
+    -fx-text-fill: rgb(170, 170, 170) 
+}
+.dark-mode .menu-bar .menu-item .label {
+    -fx-text-fill: white;
+}
+
+.dark-mode .footer-container, .dark-mode .menu-bar{
+    -fx-background-color: #1a1a1a52;
+}
+
+.dark-mode .file-text-field .scroll-bar:vertical,
+.dark-mode #suggested-word-list .scroll-bar:vertical {
+    -fx-pref-width: 15px;
+    -fx-background-color: #1E1E1E;
+}
+
+.dark-mode .file-text-field .scroll-bar:vertical .thumb,
+.dark-mode #suggested-word-list .scroll-bar:vertical .thumb {
+    -fx-background-color: #2e2e2e;
+    -fx-effect: innershadow(gaussian, #606060, 2, 0.0, 0, 1);
+}
+
+.dark-mode .file-text-field .scroll-bar:vertical .thumb:hover,
+.dark-mode #suggested-word-list .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #555555;
+}
